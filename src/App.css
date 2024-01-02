@@ -1,0 +1,471 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+/* nav  */
+
+.navbar-nav {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 991px) {
+  .nav-item {
+    margin-left: 10rem;
+  }
+}
+
+/* hero  */
+
+.hero {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  padding-top: 8rem;
+}
+.hero button {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  outline: transparent;
+  border: 2px solid transparent;
+  margin-left: 1rem;
+  transition: all 300ms ease-in-out;
+  margin-top: 3rem;
+}
+.hero button:hover {
+  background-color: rgb(0, 0, 28);
+  border: 2px solid white;
+  color: white;
+  padding: 0.5rem 1.2rem;
+}
+
+.outer-container {
+  background-color: rgb(0, 0, 28);
+}
+.hero h1 {
+  font-size: 1.7rem;
+  font-style: italic;
+  text-shadow: 2px 2px 10px rgb(87, 87, 87);
+}
+.hero-image {
+  text-align: center;
+}
+.hero h1 span {
+  text-decoration: underline;
+  font-size: 2rem;
+}
+.small-img {
+  filter: drop-shadow(2px 2px 10px rgb(87, 87, 87));
+  width: 90vw;
+  max-width: 400px;
+}
+.center {
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .small-img {
+    width: 400px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h1 span {
+    font-size: 3rem;
+  }
+}
+
+/* live chat */
+.live-chat {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  animation: beat 1s infinite alternate ease;
+  cursor: pointer;
+  background-color: white;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
+}
+
+/* line  */
+
+/* cardiology */
+
+.cardiologist {
+  padding-top: 2rem;
+  text-align: center;
+  display: grid;
+  align-self: center;
+  background-color: white;
+}
+.doctor-info {
+  display: grid;
+  place-items: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+  margin-top: 5rem;
+}
+.doctor-info p {
+  text-align: center;
+}
+.doctor-info h5 {
+  background-color: black;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 1rem;
+}
+.doctor p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.doctor-info h3 {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 750px) {
+}
+.section-heading {
+  position: relative;
+}
+.img-fluid {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+  border: 2px solid rgb(227, 227, 227);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  box-shadow: 2px 2px 10px 2px rgb(215, 215, 215);
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+.img-fluid:hover {
+  transform: scale(1.04);
+}
+
+.line {
+  height: 5px;
+  width: 100px;
+  background-color: black;
+  align-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* #testimonoals  */
+
+/* services  */
+.services-container {
+  display: grid;
+  place-items: center;
+  grid-gap: 1rem;
+}
+.service-card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-rows: 1fr 2fr;
+  /* text-align: center; */
+  height: 450px;
+  width: 450px;
+  border-radius: 1rem;
+  text-align: center;
+  cursor: pointer;
+
+  transition: all 300ms;
+}
+.service-card img {
+  height: 300px;
+  /* width: 300px; */
+}
+.service-card li {
+  list-style: square;
+}
+
+article {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 1px 1px 5px 1px rgb(180, 180, 180);
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+/* basic article elements styling */
+article h2 {
+  margin: 0 0 18px 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 24px;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+
+article a:focus {
+  outline: 1px dotted #28666e;
+}
+
+article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Figtree", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  /* background-image: linear-gradient(45deg, #7c9885, #b5b682); */
+  min-height: 100vh;
+}
+
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+@media screen and (max-width: 960px) {
+  article {
+    container: card/inline-size;
+  }
+  .article-body p {
+    display: none;
+  }
+}
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  .article-body {
+    padding-left: 0;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+@media screen and (max-width: 450px) {
+  .service-card {
+    width: 90%;
+    height: auto;
+  }
+  .service-card img {
+    width: 90%;
+  }
+}
+.service-card:hover {
+  box-shadow: 2px 2px 5px 2px gray;
+}
+.service-card li {
+  text-align: left;
+}
+@media screen and (min-width: 950px) {
+  .services-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .services-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* book an appointment  */
+.booking-container {
+  display: grid;
+  place-items: "center";
+  /* grid-template-columns: 1fr 1fr; */
+  grid-gap: 2rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.booking-image {
+  display: grid;
+  place-items: "center";
+  width: 100vw;
+  height: 400px;
+  /* width: 500px;  */
+}
+.booking-image img {
+  object-fit: cover;
+}
+@media screen and (min-width: 950px) {
+  .booking-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .booking-image {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+/* footer  */
+.Footer {
+  background-color: rgb(0, 0, 28);
+  color: white;
+}
+.footer-container {
+  padding: 1rem;
+  display: grid;
+}
+.footer-container > div {
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 650px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    word-spacing: 5px;
+  }
+  .footer-container > div {
+    padding: 0;
+  }
+}
+
+.icon-container {
+  background-color: rgb(230, 230, 230);
+  padding: 0.4rem;
+  margin: 0.3rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.icons {
+  display: flex;
+}
+.quicklinks ul {
+  padding: 0;
+}
+.quicklinks ul li {
+  list-style: none;
+}
+
+.arrow-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.arrow-list li {
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px; /* Adjust spacing between items as needed */
+}
+
+.arrow-list li::before {
+  content: "→"; /* You can use other Unicode arrows or images here */
+  position: absolute;
+  left: 0;
+  color: #ffffff; /* Adjust arrow color as needed */
+  font-size: 18px; /* Adjust arrow size as needed */
+}
+
+/* copyright  */
+.copy-right {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
